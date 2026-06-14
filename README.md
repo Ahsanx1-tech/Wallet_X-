@@ -1,44 +1,82 @@
-# Wallet_X-
-WalletX Pro is a full-stack financial dashboard designed to simulate a modern mobile money application. The project focuses on relational database design, secure transaction handling, and business intelligence reporting.
+💳 WalletX Pro: Digital Wallet Management System
+![alt text](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)
 
-🚀 Key Features
-User Onboarding: Dynamic registration with validation.
-P2P Transfers: Secure money transfers between users using SQL Transaction logic.
-Bill Payments: Integrated system to pay utilities (LESCO, PTCL, etc.).
-BI Dashboard: Real-time metrics for Active Users, Total Liquidity, and Revenue Charts.
-Admin Search: Multi-filter search for user account management.
+![alt text](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+
+![alt text](https://img.shields.io/badge/MS_SQL_Server-CC2927?logo=microsoft-sql-server&logoColor=white)
+
+![alt text](https://img.shields.io/badge/FAST--NUCES-CFD_Campus-004184)
+WalletX Pro is a full-stack financial dashboard developed as the Final Project for the Database Management Systems course (4th Semester). It simulates a modern mobile money environment, focusing on ACID-compliant transactions, relational data integrity, and real-time business intelligence.
+📑 Table of Contents
+Core Features
+Tech Stack
+Database Architecture
+Installation & Setup
+Usage Guide
+About the Author
+🚀 Core Features
+User Onboarding: Dynamic customer registration with real-time validation and initial deposit handling.
+P2P Transfers: Secure peer-to-peer money transfers using SQL Transaction logic (Commit/Rollback) to ensure data atomicity.
+Utility Bill Payments: Integrated module to pay bills for various providers (e.g., LESCO, PTCL) with automatic balance deduction.
+Business Intelligence (BI) Dashboard:
+Real-time metrics tracking (Active Users, Total Liquidity, Transaction Volume).
+Data visualization for revenue distribution by category using Plotly.
+Admin Governance: Advanced search filters by name and balance, alongside secure account deletion protocols.
 🛠 Tech Stack
-Frontend: Streamlit (Python-based Web Framework)
-Database: Microsoft SQL Server (MS SQL)
-Data Analysis: Pandas
-Visualization: Plotly Express
-Driver: pyodbc for Python-to-SQL connectivity
+Component	Technology
+Frontend	Streamlit
+Backend Logic	Python 3.x
+Database	Microsoft SQL Server
+Data Processing	Pandas
+Visualization	Plotly Express
+Connectivity	pyodbc
 📂 Database Setup
-This repository includes a .sql file containing the schema and dummy data.
-Open SQL Server Management Studio (SSMS).
-Create a new database named WalletX.
-Open the provided database_schema.sql (or whatever your file name is) and execute it to create tables (Users, Transactions, Billers, BillPayments).
-💻 How to Run the Project locally
-1. Install Required Softwares
-Python 3.x: Download Python
-VS Code: Download VS Code
-SQL Server Express: Download MS SQL
-2. Install Python Libraries
-Open your terminal/command prompt and run:
+Install SSMS: Ensure you have SQL Server Management Studio installed.
+Create Database: Open SSMS and run:
+code
+SQL
+CREATE DATABASE WalletX;
+Import Schema: Open the WalletX_Database.sql file included in this repository and execute it. This script will:
+Create tables: Users, Billers, Transactions, and BillPayments.
+Seed the database with sample billers and account types.
+💻 Installation & Setup
+1. Software Prerequisites
+Install the following if you haven't already:
+Python 3.x
+Visual Studio Code
+SQL Server Express
+2. Clone & Install Dependencies
+Open your terminal and run:
 code
 Bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/Wallet_X-.git
+
+# Navigate to the directory
+cd Wallet_X-
+
+# Install required libraries
 pip install streamlit pyodbc pandas plotly
 3. Configure Connection
-In app.py, find the DB_SERVER variable and replace it with your own server name (found in SSMS):
+Open app.py and update your Server Name found in SSMS:
 code
 Python
+# app.py
 DB_SERVER = r'YOUR_PC_NAME\SQLEXPRESS'
-4. Run the Application
-Navigate to the project folder and run:
+🏃 Usage Guide
+Start the Application
+Run the following command in your terminal:
 code
 Bash
 streamlit run app.py
-5. Stop the Application
-To stop the local server, press Ctrl + C in the terminal.
+The application will automatically open in your default browser at http://localhost:8501.
+Stop the Application
+To shut down the local server, go back to your terminal and press:
+Ctrl + C
 🎓 About the Author
-I am a BS FinTech student at FAST-NUCES, Chiniot-Faisalabad Campus. This project serves as my final submission for the Database Management Systems course, showcasing my ability to integrate financial business requirements with technical database solutions.
+[Your Name Here]
+BS FinTech | 4th Semester
+FAST-NUCES (Chiniot-Faisalabad Campus)
+This project was developed to demonstrate the intersection of Financial Technology and Database Management. It showcases the ability to translate business requirements into a functional, user-centric application while maintaining strict database standards.
+📄 License
+This project is for academic purposes. Please feel free to reach out for collaborations!
